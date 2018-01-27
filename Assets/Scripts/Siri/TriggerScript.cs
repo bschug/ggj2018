@@ -11,6 +11,7 @@ public class TriggerScript : MonoBehaviour {
 
 	public AudioClip [] GetDialouge (){
 
+		anim.SetBool ("BlendIn", true);
 		return dialouge;
 	}
 

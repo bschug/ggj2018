@@ -9,6 +9,7 @@ public class Game_Controller : MonoBehaviour {
 	public Segment_Manager manager;
 	public GameObject Player;
 	public Vector3 newPos;
+	public float yPos;
 
 	void Start()
 	{

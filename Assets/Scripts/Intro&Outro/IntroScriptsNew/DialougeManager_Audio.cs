@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI; 
+using UnityEngine.SceneManagement;
 
 public class DialougeManager_Audio : MonoBehaviour {
 
@@ -34,6 +36,11 @@ public class DialougeManager_Audio : MonoBehaviour {
 
 	public void EndDialouge(){
 
+		Debug.Log ("End of conversation");
 
+		continueButton.SetActive (false);
+		dialougeHasEnded = true;
 	}
+
+
 }
