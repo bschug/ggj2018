@@ -48,8 +48,9 @@ public class player_Movement : MonoBehaviour {
 	public void ledgeJump()
 	{
 		if (Player.interaction.objectCurrentlyLookedAt.GetComponent<ledge> ().closed == false) {
+			locked_Movement = true;
 			Player.interaction.objectCurrentlyLookedAt.GetComponent<ledge> ().closed = true;
-			this.GetComponent<BoxCollider2D> ().enabled = false;
+
 			StartCoroutine (jump ());
 		}
 	}
@@ -58,14 +59,12 @@ public class player_Movement : MonoBehaviour {
 	{ 
 		
 		bool done = false;
-
+		this.GetComponent<BoxCollider2D> ().enabled = false;
 		float gravity = -(2 * jumpStats.jumpHeight) / Mathf.Pow ((jumpStats.jumpDuration ), 2);
 		gravity = gravity;
 		print (gravity + " gravity");
 		jumpStats.jumpVelocity = Mathf.Abs (gravity) * (jumpStats.jumpDuration);
-
 		float height = 0.8f;
-
 		float ValueX = 0;
 		float ValueY = jumpStats.jumpVelocity;
 		while (!done) {
