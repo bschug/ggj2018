@@ -33,7 +33,8 @@ public class PlayerScript : MonoBehaviour {
 
 	void Update () {
 		
-		if (Input.GetKeyDown (KeyCode.F)) {
+		if (Input.GetKeyDown (KeyCode.F) || Input.GetButtonDown("XBOX_A")) {
+			Debug.LogWarning ("XBOX_A press"); 
 			if (getState () == playerState.interacting) {
 				
 				//if return true all interactions have been done
@@ -48,8 +49,9 @@ public class PlayerScript : MonoBehaviour {
 			}
 		}
 			
-		if(Input.GetKeyDown(KeyCode.Space))
+		if(Input.GetKeyDown(KeyCode.Space)|| Input.GetButtonDown("XBOX_X"))
 			{
+			Debug.LogWarning ("XBOX_X press");
 			//baustelle
 			interaction.attackOpponent ();
 		

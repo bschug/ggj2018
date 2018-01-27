@@ -81,7 +81,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeb5a6137c5a86e40a3ca0a387848443, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  layerAmount: 000000000000000000000000
   cameraConstrainsX: {x: -100, y: 100}
   cameraConstrainsY: {x: -100, y: 100}
 --- !u!212 &212035871249496076
