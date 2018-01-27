@@ -16,4 +16,9 @@ public class YToZ : MonoBehaviour {
         position.z = position.y / 1000f;
         transform.position = position;
 	}
+	void OnDrawGizmos() 
+	{
+		Gizmos.color = Color.red;
+		Gizmos.DrawWireSphere (this.transform.position, 0.1f);
+	}
 }
