@@ -30,7 +30,7 @@ public class Segment_Manager : MonoBehaviour {
 		valueY = valueY * this.transform.localScale.y;
 		return this.transform.position -new Vector3 (valueX, valueY, 0);
 	}
-	float Distance()
+	public float Distance()
 	{
 		float sizeY = this.GetComponentInChildren<SpriteRenderer> ().sprite.bounds.size.y;
 		sizeY = sizeY * this.transform.localScale.y;
