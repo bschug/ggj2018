@@ -8,8 +8,10 @@ public class player_Movement : MonoBehaviour {
 	public bool locked_Movement;
 	public Vector2 inputs;
 	public Vector3 currentPlayerPosition;
+	public jump jumpStats;
+	public PlayerScript Player;
 
-	[HideInInspector]
+
 	public Vector2 checkDirection;
 	[Range(0,100)]
 	public float movinSpeed;
@@ -42,4 +44,64 @@ public class player_Movement : MonoBehaviour {
 			return false;
 		}
 	}
+
+	public void ledgeJump()
+	{
+		if (Player.interaction.objectCurrentlyLookedAt.GetComponent<ledge> ().closed == false) {
+			locked_Movement = true;
+			Player.interaction.objectCurrentlyLookedAt.GetComponent<ledge> ().closed = true;
+
+			StartCoroutine (jump ());
+		}
+	}
+
+	IEnumerator jump()
+	{ 
+		
+		bool done = false;
+		this.GetComponent<BoxCollider2D> ().enabled = false;
+		float gravity = -(2 * jumpStats.jumpHeight) / Mathf.Pow ((jumpStats.jumpDuration ), 2);
+		gravity = gravity;
+		print (gravity + " gravity");
+		jumpStats.jumpVelocity = Mathf.Abs (gravity) * (jumpStats.jumpDuration);
+		float height = 1.3f;
+		float ValueX = 0;
+		float ValueY = jumpStats.jumpVelocity;
+		while (!done) {
+			
+			ValueY += gravity * Time.deltaTime;
+			height += ValueY; 
+			ValueX += (jumpStats.jumpDistance*Mathf.Abs(jumpStats.jumpVelocity))*Time.deltaTime*checkDirection.x;
+			transform.Translate (ValueX, ValueY, 0);
+			if(height <= 0) {
+				done = true;
+				this.GetComponent<BoxCollider2D> ().enabled = true;
+				locked_Movement = false;
+				StopCoroutine (jump ());
+
+			}
+			print (height + " height");
+			yield return null;
+			print (gravity);
+		}
+
+	}
 }
+
+[System.Serializable]
+public struct jump
+{
+
+
+	[Range(0,1.5f)]
+	public float jumpHeight;
+	[Range(0,1)]
+	public float jumpDuration;
+	[HideInInspector]
+	public float jumpVelocity;
+	[Range(0,1)]
+	public float jumpDistance;
+
+
+}
+
