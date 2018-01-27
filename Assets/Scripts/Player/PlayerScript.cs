@@ -9,7 +9,7 @@ public class PlayerScript : MonoBehaviour {
 	public Player_Interaction interaction;
 	public Controller _controller;
 	float childRotation;
-	public SpriteManager Sp_Manager;
+
 	//Enumeration for State-Machine
 	public enum playerState
 	{
@@ -50,6 +50,7 @@ public class PlayerScript : MonoBehaviour {
 			
 		if(Input.GetKeyDown(KeyCode.Space))
 			{
+			//baustelle
 			interaction.attackOpponent ();
 			}
 
