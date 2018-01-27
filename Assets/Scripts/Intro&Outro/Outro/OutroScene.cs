@@ -30,7 +30,7 @@ public class OutroScene : MonoBehaviour {
 		_audioSource.Play (); 
 		yield return new WaitForSeconds (_animationClip.length);
 		//Calls the Corutine
-		_dialougeTrigger.TriggerDialouge ();
+		//_dialougeTrigger.TriggerDialouge ();
 
 		StopCoroutine (blendInDelay ()); 
 	}

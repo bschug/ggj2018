@@ -7,13 +7,14 @@ public class DialougeTrigger : MonoBehaviour {
 
 	public Dialouge dialouge; 
 
-	/*public void TriggerDialouge()
+	public void TriggerDialouge()
 	{
-		if (SceneManager.GetActiveScene ().name == "IntroScene") {
+		if (SceneManager.GetActiveScene ().name == "Intro") {
 			FindObjectOfType<DialougeManager> ().StartDialouge (dialouge); 
-		} else if (SceneManager.GetActiveScene ().name == "OutroScene") {
-			FindObjectOfType<Outro_Dialouge> ().StartDialouge (dialouge); 
+		} else {
+			return; 
+		}
 		}
 
-	}*/
-}
+	}
+
