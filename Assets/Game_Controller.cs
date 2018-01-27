@@ -9,6 +9,7 @@ public class Game_Controller : MonoBehaviour {
 	public Segment_Manager manager;
 	public GameObject Player;
 	public Vector3 newPos;
+	public float yPos;
 
 	void Start()
 	{
@@ -18,6 +19,9 @@ public class Game_Controller : MonoBehaviour {
 
 	void LateUpdate ()
 	{
+		yPos = Mathf.RoundToInt(Player.transform.position.y % (currentSegment.GetComponentInChildren<SpriteRenderer> ().bounds.size.y)/manager.Distance());
+		yPos = Mathf.Abs(yPos);
+		Player.GetComponentInChildren<SpriteRenderer> ().sortingOrder = manager.layerAmount[ Mathf.RoundToInt (yPos)];
 		this.transform.position = Player.transform.position;
 		newPos.x= Mathf.Clamp (this.transform.position.x, manager.cameraConstrainsX.x, manager.cameraConstrainsX.y);
 		newPos.y = Mathf.Clamp (this.transform.position.y, manager.cameraConstrainsY.x, manager.cameraConstrainsY.y);
