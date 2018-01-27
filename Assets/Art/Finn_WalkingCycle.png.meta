@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: b86e2881cdf6045768513b303bb60610
-timeCreated: 1517075113
+timeCreated: 1517077234
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -227,7 +227,7 @@ TextureImporter:
       name: Finn_WalkingCycle_8
       rect:
         serializedVersion: 2
-        x: 2019
+        x: 2015
         y: 0
         width: 103
         height: 224
@@ -269,7 +269,7 @@ TextureImporter:
       name: Finn_WalkingCycle_11
       rect:
         serializedVersion: 2
-        x: 3362
+        x: 3367
         y: 0
         width: 103
         height: 224
@@ -283,7 +283,7 @@ TextureImporter:
       name: Finn_WalkingCycle_12
       rect:
         serializedVersion: 2
-        x: 1571
+        x: 1566
         y: 0
         width: 103
         height: 224
@@ -297,7 +297,7 @@ TextureImporter:
       name: Finn_WalkingCycle_13
       rect:
         serializedVersion: 2
-        x: 1123
+        x: 1122
         y: 0
         width: 103
         height: 224
@@ -311,7 +311,7 @@ TextureImporter:
       name: Finn_WalkingCycle_14
       rect:
         serializedVersion: 2
-        x: 675
+        x: 679
         y: 0
         width: 103
         height: 224
@@ -325,7 +325,7 @@ TextureImporter:
       name: Finn_WalkingCycle_15
       rect:
         serializedVersion: 2
-        x: 227
+        x: 231
         y: 0
         width: 103
         height: 224

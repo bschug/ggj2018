@@ -16,7 +16,7 @@ public class Game_Controller : MonoBehaviour {
 		manager= startSegment.GetComponent<Segment_Manager> ();
 	}
 
-	void Update ()
+	void LateUpdate ()
 	{
 		this.transform.position = Player.transform.position;
 		newPos.x= Mathf.Clamp (this.transform.position.x, manager.cameraConstrainsX.x, manager.cameraConstrainsX.y);

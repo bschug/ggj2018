@@ -64,7 +64,7 @@ public class player_Movement : MonoBehaviour {
 		gravity = gravity;
 		print (gravity + " gravity");
 		jumpStats.jumpVelocity = Mathf.Abs (gravity) * (jumpStats.jumpDuration);
-		float height = 0.8f;
+		float height = 1.3f;
 		float ValueX = 0;
 		float ValueY = jumpStats.jumpVelocity;
 		while (!done) {
