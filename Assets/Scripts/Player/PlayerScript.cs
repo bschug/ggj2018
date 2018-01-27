@@ -95,7 +95,6 @@ public class PlayerScript : MonoBehaviour {
 							{
 						case "Ledge":
 							print ("ledge");
-							movement.locked_Movement = true;
 							movement.ledgeJump();
 							break;
 						
