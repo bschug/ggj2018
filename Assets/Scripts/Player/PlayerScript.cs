@@ -52,6 +52,7 @@ public class PlayerScript : MonoBehaviour {
 			{
 			//baustelle
 			interaction.attackOpponent ();
+		
 			}
 
 		//Only move when player is not locked
@@ -65,7 +66,8 @@ public class PlayerScript : MonoBehaviour {
 					player_Movement.lookingDirectionState direction = movement.inputs.x == 1 ? player_Movement.lookingDirectionState.facingRight : player_Movement.lookingDirectionState.facingLeft;
 					//if lookingDirection != actualLookingDirection rotate Sprite
 					if(movement.doTransition(direction)){
-					rotateChild ();
+					string turnDirection = direction == player_Movement.lookingDirectionState.facingRight? "right":"left";
+					rotateChild (turnDirection);
 					movement.checkDirection.x = movement.inputs.x;
 					movement.checkDirection.y = 0;
 					}
@@ -87,19 +89,42 @@ public class PlayerScript : MonoBehaviour {
 
 				if (hit) {
 					if (interaction.objectCurrentlyLookedAt == null) {
+						interaction.objectCurrentlyLookedAt = hit.transform.gameObject;
 						Debug.LogWarning ("hitting " + hit.transform.gameObject.name);
+						switch(layerName(hit.transform.gameObject.layer))
+							{
+						case "Ledge":
+							print ("ledge");
+							movement.locked_Movement = true;
+							movement.ledgeJump();
+							break;
+						
+							}
+					
 					}
-					interaction.objectCurrentlyLookedAt = hit.transform.gameObject;
+
 				} else {
 					interaction.objectCurrentlyLookedAt = null;
 				}
 			}
 		}
+
+	}
+	string layerName(int layerIndex)
+	{
+	return LayerMask.LayerToName (layerIndex);
 	}
 
-	void rotateChild()
+	void rotateChild(string Direction)
 	{
-		this.transform.GetChild (0).transform.Rotate (Vector3.up * 180);
+		if (Direction == "right")
+		{
+			this.transform.GetChild (0).transform.rotation = new Quaternion (0, 0, 0, 0);
+		} 
+		else 
+		{
+			this.transform.GetChild (0).transform.rotation = new Quaternion (0,180,0,0);
+		}
 	}
 
 	//Request to change PlayerState
@@ -139,7 +164,8 @@ public class PlayerScript : MonoBehaviour {
 		float offsetY = 0;
 
 
-		offsetX = this.GetComponent<BoxCollider2D> ().bounds.size.x * movement.checkDirection.x;
+		offsetX = this.GetComponent<BoxCollider2D> ().bounds.size.x *((this.GetComponent<BoxCollider2D>().bounds.size.x/2)* movement.checkDirection.x);
+
 		offsetY = this.GetComponent<BoxCollider2D> ().bounds.size.y * movement.checkDirection.y;
 		
 
