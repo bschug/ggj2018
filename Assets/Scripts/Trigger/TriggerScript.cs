@@ -15,6 +15,9 @@ public class TriggerScript : MonoBehaviour, Itrigger {
 
 	public triggerDetection Player;
 
+    [Tooltip("Trigger a story event")]
+    public string StoryEvent;
+
 	void Start()
 	{
 		Player = GameObject.FindGameObjectWithTag ("Player").GetComponent<triggerDetection>();
@@ -40,6 +43,11 @@ public class TriggerScript : MonoBehaviour, Itrigger {
 		return FindObjectOfType<dialogue_Manager> ();
 	}
 
+    StoryManager getStoryManager()
+    {
+        return FindObjectOfType<StoryManager>();
+    }
+
 	public bool interactionHasEnded(float index)
 	{
 		if (index != dialouge.Length) {
@@ -55,6 +63,11 @@ public class TriggerScript : MonoBehaviour, Itrigger {
 		if (!getDialogueManager ().hasBeenSaid.Contains (this.gameObject.name)) {
 			getDialogueManager ().hasBeenSaid.Add (this.gameObject.name);
 			StartCoroutine (dialogueIterator ());
+
+            if (!string.IsNullOrEmpty(StoryEvent))
+            {
+                getStoryManager().hasBeenTriggered.Add(StoryEvent);
+            }
 		}
 		else
 		{
