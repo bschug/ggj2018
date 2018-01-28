@@ -15,7 +15,8 @@ public class OutroScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+
+		FindObjectOfType<Singleton> ().GetComponent<AudioSource> ().enabled = false; 
 		_audioSource = this.GetComponent<AudioSource>();
 		StartCoroutine (playBling()); 
 

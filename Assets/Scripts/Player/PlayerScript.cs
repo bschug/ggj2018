@@ -63,18 +63,20 @@ public class PlayerScript : MonoBehaviour {
 			if (getState () == playerState.checking) {
 			}
 			if (movement.inputs.magnitude != 0) {
+				movement._anim.SetBool ("StandingStill", false);
+				movement._anim.Play ("walking_Horizontally");
 				if (movement.inputs.x != 0) {
 					
 					player_Movement.lookingDirectionState direction = movement.inputs.x == 1 ? player_Movement.lookingDirectionState.facingRight : player_Movement.lookingDirectionState.facingLeft;
 					//if lookingDirection != actualLookingDirection rotate Sprite
-					if(movement.doTransition(direction)){
-					string turnDirection = direction == player_Movement.lookingDirectionState.facingRight? "right":"left";
-					rotateChild (turnDirection);
-					movement.checkDirection.x = movement.inputs.x;
-					movement.checkDirection.y = 0;
+					if (movement.doTransition (direction)) {
+						string turnDirection = direction == player_Movement.lookingDirectionState.facingRight ? "right" : "left";
+						rotateChild (turnDirection);
+						movement.checkDirection.x = movement.inputs.x;
+						movement.checkDirection.y = 0;
 					}
 				} else {
-					player_Movement.lookingDirectionState direction  = movement.inputs.y == 1 ? player_Movement.lookingDirectionState.facingUp : player_Movement.lookingDirectionState.facingDown;
+					player_Movement.lookingDirectionState direction = movement.inputs.y == 1 ? player_Movement.lookingDirectionState.facingUp : player_Movement.lookingDirectionState.facingDown;
 					//if lookingDirection != actualLookingDirection rotate Sprite
 					if (movement.doTransition (direction)) {
 						movement.checkDirection.y = movement.inputs.y;
@@ -83,8 +85,9 @@ public class PlayerScript : MonoBehaviour {
 				}
 		
 				_controller.move (movement.inputs * Time.deltaTime * movement.movinSpeed);
+			} else {
+				movement._anim.SetBool ("StandingStill", true);
 			}
-
 			if (getState () == playerState.checking) {
 				//check for responsive GameObject with BoxCast
 				RaycastHit2D hit = Physics2D.BoxCast (convertToVector2 (this.transform.position) + convertToVector2 (checkBoxOffset ()), checkBoxSize (), 0, Vector2.right, 0, interaction.interactionMask);

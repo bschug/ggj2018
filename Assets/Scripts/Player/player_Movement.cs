@@ -10,6 +10,7 @@ public class player_Movement : MonoBehaviour {
 	public Vector3 currentPlayerPosition;
 	public jump jumpStats;
 	public PlayerScript Player;
+	public Animator _anim; 
 
 
 	public Vector2 checkDirection;
