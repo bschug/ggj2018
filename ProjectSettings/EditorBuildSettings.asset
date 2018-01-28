@@ -14,3 +14,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Mascha_Scene.unity
     guid: 54d265ddd5cdb4d1eacce5ac44665dd3
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level_Template.unity
+    guid: ee2653f471e4b334b9bee59b49d1de84
+  - enabled: 1
+    path: Assets/Scenes/Levels/Room_01.unity
+    guid: 9b228101943c0de4c9587dc15f596a64
+  - enabled: 1
+    path: Assets/Scenes/Levels/Room_02.unity
+    guid: 428e9312d8852a64894c54ea15cf82b2
