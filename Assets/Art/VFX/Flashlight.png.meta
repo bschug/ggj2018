@@ -1,12 +1,13 @@
 fileFormatVersion: 2
-guid: 28ede03cccc5e7343b456eaedfeb4e5a
-timeCreated: 1516923277
+guid: 47944f3acdb4efd4f8361efb63b8b87b
+timeCreated: 1517145071
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: newdude_0
-    21300002: newdude_1
-    21300004: newdude_2
+    21300000: Flashlight_0
+    21300002: Flashlight_1
+    21300004: Flashlight_2
+    21300006: Flashlight_3
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -51,7 +52,7 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
@@ -63,7 +64,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -72,16 +73,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-  - buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -90,13 +82,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: newdude_0
+      name: Flashlight_0
       rect:
         serializedVersion: 2
-        x: 30
-        y: 110
-        width: 140
-        height: 500
+        x: 0
+        y: 0
+        width: 20
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -104,13 +96,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: newdude_1
+      name: Flashlight_1
       rect:
         serializedVersion: 2
-        x: 190
-        y: 112
-        width: 140
-        height: 500
+        x: 20
+        y: 0
+        width: 20
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,13 +110,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: newdude_2
+      name: Flashlight_2
       rect:
         serializedVersion: 2
-        x: 339
-        y: 110
-        width: 140
-        height: 500
+        x: 40
+        y: 0
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Flashlight_3
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 0
+        width: 20
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
