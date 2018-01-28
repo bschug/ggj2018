@@ -151,6 +151,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 82295025287092418, guid: 91fa50ca4f238af42883fa1ba25de3af,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4e1b125ce68f9824ba3516cae06b26c0, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 91fa50ca4f238af42883fa1ba25de3af, type: 2}
   m_IsPrefabParent: 0
@@ -305,7 +310,7 @@ Prefab:
     - target: {fileID: 114105951397285384, guid: 58e9ac16026adc44fb0350701bc43e9a,
         type: 2}
       propertyPath: sceneToLoad
-      value: Level_Template
+      value: Outro
       objectReference: {fileID: 0}
     - target: {fileID: 212944747136884184, guid: 58e9ac16026adc44fb0350701bc43e9a,
         type: 2}
@@ -452,6 +457,11 @@ Prefab:
     - target: {fileID: 4296150949344294, guid: 771d7bb5c48506e4e9198f345d10472c, type: 2}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 82627635943768336, guid: 771d7bb5c48506e4e9198f345d10472c,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 771d7bb5c48506e4e9198f345d10472c, type: 2}
