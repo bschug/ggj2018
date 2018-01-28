@@ -63,5 +63,15 @@ public class TriggerScript : MonoBehaviour, Itrigger {
 
 	}
 
-
+	Vector2 DisplayBoxSize()
+	{
+		float ValueX = this.GetComponent<BoxCollider2D>().size.x*this.transform.localScale.x;
+		float ValueY = this.GetComponent<BoxCollider2D>().size.y*this.transform.localScale.y;
+		return new Vector2 (ValueX, ValueY);
+	}
+	void OnDrawGizmos()
+	{
+		Gizmos.color = Color.blue;
+		Gizmos.DrawCube(this.transform.position,DisplayBoxSize());
+	}
 }
