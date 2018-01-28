@@ -15,6 +15,10 @@ public class TriggerScript : MonoBehaviour, Itrigger {
 
 	public triggerDetection Player;
 
+	void Start()
+	{
+		Player = GameObject.FindGameObjectWithTag ("Player").GetComponent<triggerDetection>();
+	}
 
 	public AudioClip  GetDialouge (int index){
 
@@ -31,6 +35,10 @@ public class TriggerScript : MonoBehaviour, Itrigger {
 			Destroy (this.gameObject); 
 
 	}
+	dialogue_Manager getDialogueManager()
+	{
+		return FindObjectOfType<dialogue_Manager> ();
+	}
 
 	public bool interactionHasEnded(float index)
 	{
@@ -44,14 +52,21 @@ public class TriggerScript : MonoBehaviour, Itrigger {
 	}
 	public void triggerEvent()
 	{
-		
-		StartCoroutine (dialogueIterator ());
+		if (!getDialogueManager ().hasBeenSaid.Contains (this.gameObject.name)) {
+			getDialogueManager ().hasBeenSaid.Add (this.gameObject.name);
+			StartCoroutine (dialogueIterator ());
+		}
+		else
+		{
+			Debug.Log (this.gameObject.name + " has already been played");
+		}
 	}
 
 	IEnumerator dialogueIterator()
 	{
 		int index = 0;
 		while (!interactionHasEnded (index)) {
+			print (index);
 		Player.A_source.clip = dialouge [index];
 		Player.A_source.Play();
 		yield return new WaitForSeconds (dialouge[index].length);
