@@ -38,7 +38,7 @@ public class IntroScript_audio : MonoBehaviour {
 		_audioSource.clip = _introDialouge2; 
 		_audioSource.Play (); 
 		yield return new WaitForSeconds (_introDialouge2.length);
-		SceneManager.LoadScene("Mascha_Scene", LoadSceneMode.Single); 
+		SceneManager.LoadScene("Level_Template", LoadSceneMode.Single); 
 		StopCoroutine (playSound ()); 
 	}
 

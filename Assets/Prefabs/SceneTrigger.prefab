@@ -64,7 +64,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1137124193927528}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.11, y: -0.35, z: -0.18554688}
+  m_LocalPosition: {x: 5.15, y: -4.03, z: -0.18554688}
   m_LocalScale: {x: 4.239952, y: 2.8089654, z: 4.23995}
   m_Children:
   - {fileID: 4434462444917934}
@@ -107,8 +107,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0125d0ee7142c204c9f310198c3d03c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FadeOutSpeed: 0.0297
-  sceneToLoad: Mascha_Scene
+  FadeOutSpeed: 0.015
+  sceneToLoad: Room_01
   FadeInScreen: {fileID: 1785172100778112}
 --- !u!212 &212944747136884184
 SpriteRenderer:

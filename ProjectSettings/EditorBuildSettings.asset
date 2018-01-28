@@ -6,11 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/StartScreen.unity
-    guid: 3d9836dd52916486d824c832408eb644
-  - enabled: 1
     path: Assets/Scenes/Intro.unity
     guid: 15f5dc19b7a854703b85a7902b9633b0
   - enabled: 1
-    path: Assets/Scenes/Mascha_Scene.unity
-    guid: 54d265ddd5cdb4d1eacce5ac44665dd3
+    path: Assets/Scenes/Levels/Level_Template.unity
+    guid: ee2653f471e4b334b9bee59b49d1de84
