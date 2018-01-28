@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114515925652918286}
   - component: {fileID: 95634180423184250}
   m_Layer: 5
-  m_Name: "Siri_H\xFClle_cry"
+  m_Name: "Siri_Hu\u0308lle_cry"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
