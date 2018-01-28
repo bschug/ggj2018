@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 114471328297262334}
   - component: {fileID: 95561502792004272}
   m_Layer: 5
-  m_Name: "Siri_H\xFClle_kiss"
+  m_Name: "Siri_Hu\u0308lle_kiss"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 114917082379593136}
   - component: {fileID: 95918533613450510}
   m_Layer: 5
-  m_Name: "Siri_H\xFClle_wink"
+  m_Name: "Siri_Hu\u0308lle_wink"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
