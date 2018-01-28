@@ -12,11 +12,13 @@ public class OutroScript : MonoBehaviour {
 	public AnimationClip _EndAnimClip; 
 	public AudioClip _SiriBling; 
 	public AudioSource _audioSource; 
+	public AudioClip _finalSong; 
 
 	// Use this for initialization
 	void Start () {
 
-		FindObjectOfType<Singleton> ().GetComponent<AudioSource> ().enabled = false; 
+		FindObjectOfType<Singleton> ().GetComponent<AudioSource> ().clip = _finalSong ; 
+		FindObjectOfType<Singleton> ().GetComponent<AudioSource> ().Play (); 
 		_audioSource = this.GetComponent<AudioSource>();
 		StartCoroutine (playBling()); 
 
