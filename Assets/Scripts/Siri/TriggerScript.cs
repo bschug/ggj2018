@@ -52,6 +52,7 @@ public class TriggerScript : MonoBehaviour, Itrigger {
 	{
 		int index = 0;
 		while (!interactionHasEnded (index)) {
+			print (index);
 		Player.A_source.clip = dialouge [index];
 		Player.A_source.Play();
 		yield return new WaitForSeconds (dialouge[index].length);
