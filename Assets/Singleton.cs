@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Singleton : MonoBehaviour {
 
+
 	public static Singleton instance;
  
 	// Use this for initialization
@@ -21,3 +22,4 @@ public class Singleton : MonoBehaviour {
 	
 
 }
+
