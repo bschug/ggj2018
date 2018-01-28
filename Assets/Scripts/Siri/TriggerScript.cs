@@ -15,6 +15,10 @@ public class TriggerScript : MonoBehaviour, Itrigger {
 
 	public triggerDetection Player;
 
+	void Start()
+	{
+		Player = GameObject.FindGameObjectWithTag ("Player").GetComponent<triggerDetection>();
+	}
 
 	public AudioClip  GetDialouge (int index){
 
