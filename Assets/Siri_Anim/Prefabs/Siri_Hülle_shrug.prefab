@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114229945980737496}
   - component: {fileID: 95801101171162206}
   m_Layer: 5
-  m_Name: "Siri_Hu\u0308lle_shrug"
+  m_Name: "Siri_H\xFClle_shrug"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
