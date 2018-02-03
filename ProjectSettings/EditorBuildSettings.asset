@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Level_Template.unity
     guid: ee2653f471e4b334b9bee59b49d1de84
+  - enabled: 1
+    path: Assets/Art/Outro/MockUP/Source/Fireflies_Outro.unity
+    guid: 75a9806ebc3621c4d9346a8096e3fec3
